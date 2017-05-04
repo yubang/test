@@ -9,5 +9,9 @@ app = Flask(__name__)
 def index():
     return sys.version
 
+@app.route("/debug")
+def debug():
+    return "debug"
+
 if __name__ == "__main__":
-    app.run(port=8002)
+    app.run(port=80)
